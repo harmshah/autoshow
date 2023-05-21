@@ -55,7 +55,7 @@ const PhotoGallery = () => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>{renderImages()}</View>
     </ScrollView>
   );

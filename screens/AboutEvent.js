@@ -84,7 +84,7 @@ export default function AboutEvent() {
             <View style={styles.HeaderView}>
                 <Text style={styles.HeaderText}>About The Event</Text>
             </View>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <Image style={styles.image1} source={img1} />
                 <Text style={styles.headingText}>
                     Gerogian Auto Show 2023, is not just about showcasing cars, its a platform for industry leaders and experts to share their knowledge and insights.

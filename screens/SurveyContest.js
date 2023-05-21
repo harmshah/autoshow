@@ -38,7 +38,7 @@ const SurveyContest = () => {
       <View style={styles.HeaderView}>
         <Text style={styles.HeaderText}>Survey Contest</Text>
       </View>
-      <ScrollView  style={{padding:20}}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{padding:20}}>
         <Text>First Name</Text>
         <TextInput style={styles.input}
           placeholder="Enter FirstName"></TextInput>

@@ -11,7 +11,7 @@ export default class FloorMap extends PureComponent {
                 <View style={style.HeaderView}>
                 <Text style={style.HeaderText}>Floor Map</Text>
             </View>
-                <ScrollView>
+                <ScrollView showsVerticalScrollIndicator={false}>
                     <Image style={style.image} source={img} />
                     <Text style={style.headingText}>Parking lot and Coordinates</Text>
 

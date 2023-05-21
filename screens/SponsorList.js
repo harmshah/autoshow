@@ -178,7 +178,7 @@ const SponsorList = () => {
       <View style={styles.HeaderView}>
         <Text style={styles.HeaderText}>Sponsor's List</Text>
       </View>
-      <ScrollView style={{ paddingTop: 10 }}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ paddingTop: 10 }}>
         <View style={styles.heading}>
           <Text style={styles.headingText}>VIP Night Sponsor</Text>
         </View>

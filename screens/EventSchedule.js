@@ -19,7 +19,7 @@ const EventSchedule = () => {
             <View style={styles.HeaderView}>
                 <Text style={styles.HeaderText}>Event Schedule</Text>
             </View>
-            <ScrollView style={styles.scrollContainer}>
+            <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollContainer}>
               <Text style={styles.event}>
                 <Text style={styles.eventName}>Opening Ceremonies and Flag Raising</Text>
                 <Text style={styles.info}>
@@ -92,7 +92,7 @@ const EventSchedule = () => {
             <View style={styles.HeaderView}>
                 <Text style={styles.HeaderText}>Event Schedule</Text>
             </View>
-          <ScrollView style={styles.scrollContainer}>
+          <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollContainer}>
             <Text style={styles.event}>
               <Text style={styles.eventName}>Gates Open</Text>
               <Text style={styles.info}>
@@ -184,7 +184,7 @@ const EventSchedule = () => {
             <View style={styles.HeaderView}>
                 <Text style={styles.HeaderText}>Event Schedule</Text>
             </View>
-          <ScrollView style={styles.scrollContainer}>
+          <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollContainer}>
             <Text style={styles.event}>
               <Text style={styles.eventName}>Gates Open</Text>
               <Text style={styles.info}>

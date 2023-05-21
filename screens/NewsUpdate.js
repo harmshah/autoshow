@@ -9,7 +9,7 @@ export default class NewsUpdate extends PureComponent {
                 <View style={style.HeaderView}>
                 <Text style={style.HeaderText}>News/Updates</Text>
             </View>
-                <ScrollView style={{paddingTop:10}}>
+                <ScrollView showsVerticalScrollIndicator={false} style={{paddingTop:10}}>
                     <TouchableOpacity style={card}>
                         <Text style={date}>June 22,2022,  11:20AM</Text>
                         <Text style={cardText}>Announcement</Text>
