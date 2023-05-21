@@ -7,7 +7,7 @@ export default function ContactUs() {
             <View style={styles.HeaderView}>
                 <Text style={styles.HeaderText}>Contact Us</Text>
             </View>
-            <ScrollView style={{ padding: 20 }}>
+            <ScrollView showsVerticalScrollIndicator={false} style={{ padding: 20 }}>
                 <Text>First Name</Text>
                 <TextInput style={styles.input} placeholder="Enter FirstName"></TextInput>
 

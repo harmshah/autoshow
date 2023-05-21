@@ -51,7 +51,7 @@ export default function AutoShow() {
             <View style={styles.HeaderView}>
                 <Text style={styles.HeaderText}>Auto Show</Text>
             </View>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
             <Image style={styles.image} source={img4} />
                 <Text style={styles.headingText}>2023 Porsche 911 Turbo S: This high-performance sports car is a favorite among enthusiasts. It has a twin-turbocharged 3.8-liter flat-six engine with 640 horsepower and 590 lb-ft of torque, and can reach a top speed of 205 mph.</Text>
                 <Image style={styles.image} source={img2} />
