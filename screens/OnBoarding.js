@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     letterSpacing: 1.5,
     textAlign: 'center',
     position: 'relative',
-    fontFamily: 'OpenSans-SemiBold',
     color: 'white',
     fontWeight: '500'
   },
