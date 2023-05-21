@@ -1,20 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, Image } from 'react-native'
 import OnBoarding from './OnBoarding';
-const img = require('../assets/AutoShow.png');
+const img = require('../assets/logo/AutoShow-2023-blk-hrz.png');
 
 const Splash = ({navigation}) => {
 
     const styles = StyleSheet.create({
         container: {
             flex: 1,
-            backgroundColor: '#004B87',
+            backgroundColor: '#fff',
             padding: 20,
             justifyContent: 'center',
             alignItems: 'center',
         },
         image: {
-            width: '50%',
+            width: '80%',
             height: 300,
             resizeMode: 'contain'
         }

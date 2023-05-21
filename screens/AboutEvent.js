@@ -3,7 +3,7 @@ import { View, Image, StyleSheet, Text, Dimensions, ScrollView } from 'react-nat
 import MapView, { Marker } from 'react-native-maps';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
-const img1 = require('../assets/Cars/Mustang.png');
+const img1 = require('../assets/Cars/1.png');
 const img2 = require('../assets/pinnedmap.png');
 
 export default function AboutEvent() {
@@ -49,7 +49,7 @@ export default function AboutEvent() {
         },
         image1: {
             width: '100%',
-            height: 300,
+            height: 250,
             resizeMode: 'contain'
         },
         headingText: {

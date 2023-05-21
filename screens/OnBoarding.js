@@ -2,7 +2,7 @@ import React, {useState}  from 'react';
 import { StyleSheet, Text, View, Pressable, StatusBar, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import AboutEvent from "./AboutEvent";
 
-const image = require('../assets/Cars/car3.png');
+const image = require('../assets/Cars/Car1.jpg');
 
 const OnBoarding = ({ navigation }) => {
 
