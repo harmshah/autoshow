@@ -1,0 +1,40 @@
+.bg_image_section{
+            
+    background-image: url('./assets/experience.avif');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            min-height: 600px;
+                            display: flex;
+align-items: center;
+                        }
+
+.text_container{
+ 
+height: 100%;
+
+}
+
+
+.profile img{
+width: 100%;
+}
+
+.image_container{
+margin-top: -6%!important; 
+gap:4%;
+}
+.footer_logo{
+float: right;
+object-fit: contain;
+}
+
+.banner {
+    width: 100%;
+    height: 85vh;
+    background-image: linear-gradient( rgba(114, 108, 108, 0.75), rgba(114, 108, 108, 0.75) ), url(assets/Georgian\ college.jpeg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    margin-top: 0%;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Survey</title>
+
+</head>
+<body class="exhibition">
+    <header>
+        <!-- Navbar Dark -->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/AutoShow_Logo_White.png" height="90px" width="200px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item ml-lg-4">
+                            <a class="nav-link" aria-current="page" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item ml-lg-4">
+                            <a class="nav-link" aria-current="page" href="exhibition.html">Exhibition</a>
+                        </li>
+                        <li class="nav-item ml-lg-4">
+                            <a class="nav-link" aria-current="page" href="Events.html">Events</a>
+                        </li>
+                        <li class="nav-item ml-lg-4">
+                            <a class="nav-link" aria-current="page" href="survey.html">Survey</a>
+                        </li>
+                        <li class="nav-item ml-lg-4">
+                            <a class="nav-link" aria-current="page" href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li class="nav-item ml-lg-4">
+                            <a class="nav-link" aria-current="page" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+    </header>
+
+  <div class="form_bg ">
+      <div class="container"> 
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-6 form">
+                  <form>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="car-type" class="form-label">What type of car do you own?</label>
+                      <select class="form-select" id="car-type" required>
+                        <option selected disabled>Choose one...</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="sports">Sports Car</option>
+                        <option value="truck">Truck</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Do you plan on attending the event this year?</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="attend-event" id="yes-attend" value="yes" required>
+                        <label class="form-check-label" for="yes-attend">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="attend-event" id="no-attend" value="no" required>
+                        <label class="form-check-label" for="no-attend">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">If you are attending, what is your main reason for attending?</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reason-for-attending" id="see-new-cars" value="see-new-cars" required>
+                        <label class="form-check-label" for="see-new-cars">
+                          To see new cars
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reason-for-attending" id="meet-people" value="meet-people" required>
+                        <label class="form-check-label" for="meet-people">
+                          To meet other car enthusiasts
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reason-for-attending" id="participate-activities" value="participate-activities" required>
+                        <label class="form-check-label" for="participate-activities">
+                          To participate in activities
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reason-for-attending" id="other-reason" value="other" required>
+                        <label class="form-check-label" for="other-reason">
+                          Other (please specify)
+                        </label>
+                        <input type="text" class="form-control mt-2" id="other-reason-text" placeholder="Please specify">
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="comments" class="form-label">Do you have any comments or suggestions for the event organizers?</label>
+                      <textarea class="form-control" id="comments" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+          
+          </div>
+          
+    </div>
+    </div>
+
+  
+    <footer class="py-5 mt-md-5 border-top bg-primary ">
+        <div class="row container">
+            <div class="col-12 col-md">                                        
+                <ul class="list-unstyled text-small d-flex gap-3">
+                    <li>
+                        <a class="text-white text-decoration-none" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none" href="about.html">About US</a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none" href="exhibition.html">Exhibition</a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none" href="Events.html">Events</a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none" href="survey.html">Survey</a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none" href="sponsor.html">Sponsor</a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <img class="mb-2 object-fit-contain footer_logo" src="./assets/AutoShow_Logo_White.png" alt="" width="100" height="70">                                        
+            </div>                                    
+            
+        </div>
+    </footer>
+                      
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+</body>
+</html>

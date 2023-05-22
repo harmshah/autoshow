@@ -1,0 +1,129 @@
+.bg_image_section{
+            
+    background-image: url('../experience.avif');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            min-height: 600px;
+                            display: flex;
+align-items: center;
+                        }
+
+.text_container{
+ 
+height: 100%;
+
+}
+
+
+.profile img{
+width: 100%;
+}
+
+.image_container{
+margin-top: -6%!important; 
+gap:4%;
+}
+.footer_logo{
+float: right;
+object-fit: contain;
+}
+
+.index .banner {
+    width: 100%;
+    /* height: 85vh; */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Georgian\ college.jpeg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    margin-top: 0%;
+    color:#ffffffcc;
+}
+.ceo{
+    float: right;
+}
+.about_banner_2{ 
+    background: url(../track.png);
+    margin-top: 0px; 
+    margin-bottom: 0px;  
+    height: 633px; 
+    padding: 0px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.exhibition .banner{
+    background: url(../map.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 747px;
+
+}
+.Exhibition_cards .single_card{
+    max-height: 400px;
+    
+}
+.Exhibition_cards img{
+    margin-top: 0px;
+    padding: 20px;
+    margin-bottom: 0px;
+    width: 250px;
+    height: 100%;
+    object-fit: contain;
+
+    /* add shadow and gradint color*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+@media only screen and (max-width: 600px) {
+    .about_banner_2{
+        height: 200px;        
+    }
+
+footer ul.list-unstyled.text-small.d-flex.gap-3{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer img.mb-2.object-fit-contain.footer_logo{
+
+    float: unset;
+    margin: auto;
+    width: 100%;
+}
+.exhibition .banner{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 330px;
+}
+
+}
+header{
+    margin-bottom: -24px;
+}
+.form_bg{
+    background-size: cover!important;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Georgian\ college.jpeg);
+    color:white;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+.form{
+    /* add shadow and padding */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: white;
+    color:black;
+}
+
+
+
+.bg-primary{
+    color: #004b81 !important;
+    background-color:  #004b81 !important;
+}
