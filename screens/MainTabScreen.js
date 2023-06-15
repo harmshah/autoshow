@@ -24,7 +24,6 @@ const MainTabScreen = () => {
   useEffect(() => {
     const handleAppStateChange = (nextAppState) => {
       if (nextAppState === 'active') {
-        // App is resumed or opened, navigate to the "AboutEvent" screen
         navigation.navigate('AboutEvent');
       }
     };
