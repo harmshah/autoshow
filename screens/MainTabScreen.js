@@ -1,83 +1,114 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Linking, AppState } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-//screens
-import AutoShow from "./AutoShow";
-import EventSchedule from "./EventSchedule";
-import SurveyContest from "./SurveyContest";
-import ContactUs from "./ContactUs";
+// screens
+import AboutEvent from './AboutEvent';
+import EventSchedule from './EventSchedule';
+import FloorMap from './FloorMap';
 
 const Tab = createBottomTabNavigator();
 
-const MainTabScreen = () => (
-  <Tab.Navigator
-    initialRouteName=""
-    screenOptions={{
-      headerShown: false,
-      tabBarShowLabel: true,
-      tabBarStyle: { backgroundColor: '#004B87' },
-      tabBarInactiveTintColor: '#fff',
-      tabBarActiveTintColor: 'yellow'
-    }}
-  >
-    <Tab.Screen
-      name="AutoShow"
-      component={AutoShow}
-      options={{
-        tabBarStyle: {
-          backgroundColor: '#004B87',
-        },
-        tabBarIcon: ({ color, size }) => (
-          <Icon name="home-outline" color={color} size={size} />
-        ),
-        tabBarLabel: "Auto Show"
-      }}
-    />
+const MainTabScreen = () => {
+  const navigation = useNavigation();
 
-    <Tab.Screen
-      name="EventSchedule"
-      component={EventSchedule}
-      options={{
-        tabBarStyle: {
-          backgroundColor: '#004B87',
-        },
-        tabBarIcon: ({ color, size }) => (
-          <Icon name="car-outline" color={color} size={size} />
-        ),
-        tabBarLabel: "Event Schedule",
-      }}
-    />
+  const openSurveyContestLink = () => {
+    const surveyContestLink = 'https://www.georgiancollege.ca'; // Replace with your survey contest URL
+    Linking.openURL(surveyContestLink);
+  };
 
-    <Tab.Screen
-      name="SurveyContest"
-      component={SurveyContest}
-      options={{
-        tabBarStyle: {
-          backgroundColor: '#004B87',
-        },
-        tabBarIcon: ({ color, size }) => (
-          <Icon name="receipt-outline" color={color} size={size} />
-        ),
-        tabBarLabel: "Survey",
-      }}
-    />
+  const SurveyContestComponent = () => null; // Define the component function here
 
-    <Tab.Screen
-      name="ContactUs"
-      component={ContactUs}
-      options={{
-        tabBarStyle: {
-          backgroundColor: '#004B87',
-        },
-        tabBarIcon: ({ color, size }) => (
-          <Icon name="help-circle-outline" color={color} size={size} />
-        ),
-        tabBarLabel: "ContactUs",
-      }}
-    />
+  useEffect(() => {
+    const handleAppStateChange = (nextAppState) => {
+      if (nextAppState === 'active') {
+        // App is resumed or opened, navigate to the "AboutEvent" screen
+        navigation.navigate('AboutEvent');
+      }
+    };
 
-  </Tab.Navigator>
-);
+    // Add the app state change listener
+    AppState.addEventListener('change', handleAppStateChange);
+
+    // Clean up the listener on unmount
+    return () => {
+      AppState.removeEventListener('change', handleAppStateChange);
+    };
+  }, []);
+
+  return (
+    <Tab.Navigator
+      initialRouteName=""
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: true,
+        tabBarStyle: { backgroundColor: '#004B87' },
+        tabBarInactiveTintColor: '#fff',
+        tabBarActiveTintColor: 'yellow'
+      }}
+    >
+      <Tab.Screen
+        name="AboutEvent"
+        component={AboutEvent}
+        options={{
+          tabBarStyle: {
+            backgroundColor: '#004B87',
+          },
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="text-search" color={color} size={size} />
+          ),
+          tabBarLabel: 'About Us',
+        }}
+      />
+
+      <Tab.Screen
+        name="EventSchedule"
+        component={EventSchedule}
+        options={{
+          tabBarStyle: {
+            backgroundColor: '#004B87',
+          },
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="note-text-outline" color={color} size={size} />
+          ),
+          tabBarLabel: 'Event Schedule',
+        }}
+      />
+
+      <Tab.Screen
+        name="FloorMap"
+        component={FloorMap}
+        options={{
+          tabBarStyle: {
+            backgroundColor: '#004B87',
+          },
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="map-marker-multiple" color={color} size={size} />
+          ),
+          tabBarLabel: 'Event Map',
+        }}
+      />
+
+      <Tab.Screen
+        name="SurveyContest"
+        component={SurveyContestComponent} // Pass the component reference here
+        listeners={{
+          tabPress: () => openSurveyContestLink()
+        }}
+        options={{
+          tabBarStyle: {
+            backgroundColor: '#004B87',
+          },
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="pencil-box-outline" color={color} size={size} />
+          ),
+          tabBarLabel: 'Survey',
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
+
 export default MainTabScreen;
-

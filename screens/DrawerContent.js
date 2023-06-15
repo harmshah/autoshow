@@ -1,31 +1,31 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Linking } from 'react-native';
 import { Avatar, Title, Drawer } from 'react-native-paper';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const img = require('../assets/logo/AutoShow_Logo_Black.png');
+const img = require('../assets/images/AutoShow_Logo_Black.png');
 
 export function DrawerContent(props) {
+
+    const openSurveyContestLink = () => {
+        const surveyContestLink = 'https://www.georgiancollege.ca';
+        Linking.openURL(surveyContestLink);
+    };
+
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
 
                     <Drawer.Section style={styles.drawerSection}>
-                        <DrawerItem
-                            icon={({ color, size }) => (
-                                <Icon name="home-outline" color={color} size={size} />
-                            )}
-                            label="Auto Show"
-                            onPress={() => { props.navigation.navigate('AutoShow') }}
-                        />
+
                         <DrawerItem
                             icon={({ color, size }) => (
                                 <Icon name="text-search" color={color} size={size} />
                             )}
-                            label="About Event"
-                            onPress={() => { props.navigation.navigate('About Event') }}
+                            label="About Us"
+                            onPress={() => { props.navigation.navigate('AboutEvent') }}
                         />
                         <DrawerItem
                             icon={({ color, size }) => (
@@ -36,17 +36,17 @@ export function DrawerContent(props) {
                         />
                         <DrawerItem
                             icon={({ color, size }) => (
+                                <Icon name="map-marker-multiple" color={color} size={size} />
+                            )}
+                            label="Event Map"
+                            onPress={() => { props.navigation.navigate('FloorMap') }}
+                        />
+                        <DrawerItem
+                            icon={({ color, size }) => (
                                 <Icon name="newspaper" color={color} size={size} />
                             )}
                             label="News/Update"
                             onPress={() => { props.navigation.navigate('News Update') }}
-                        />
-                        <DrawerItem
-                            icon={({ color, size }) => (
-                                <Icon name="map-marker-multiple" color={color} size={size} />
-                            )}
-                            label="Floor Map"
-                            onPress={() => { props.navigation.navigate('Floor Map') }}
                         />
                         <DrawerItem
                             icon={({ color, size }) => (
@@ -59,16 +59,10 @@ export function DrawerContent(props) {
                             icon={({ color, size }) => (
                                 <Icon name="pencil-box-outline" color={color} size={size} />
                             )}
-                            label="Survey Contest"
-                            onPress={() => { props.navigation.navigate('SurveyContest') }}
+                            label="Survey"
+                            onPress={openSurveyContestLink}
                         />
-                        <DrawerItem
-                            icon={({ color, size }) => (
-                                <Icon name="email-edit-outline" color={color} size={size} />
-                            )}
-                            label="Contact Us"
-                            onPress={() => { props.navigation.navigate('ContactUs') }}
-                        />
+
                     </Drawer.Section>
                 </View>
             </DrawerContentScrollView>

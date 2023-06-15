@@ -21,8 +21,8 @@ const StageSponsor_logos = [
 ]
 
 const MediaSponsor_logos = [
-  require('../assets/logo/15.png'),
-  require('../assets/logo/16.png'),
+  require('../assets/SponsorLogo/15.png'),
+  require('../assets/SponsorLogo/16.png'),
 ]
 
 const MealSponsor_logos = [
@@ -33,7 +33,7 @@ const MealSponsor_logos = [
 ];
 
 const kidZone_logos = [
-  require('../assets/logo/6.png'),
+  require('../assets/SponsorLogo/7.png'),
 ];
 
 const Friend_Of_The_Show_Sponsor_logos = [

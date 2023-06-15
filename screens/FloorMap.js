@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React, { PureComponent } from 'react';
 
-const img = require('../assets/FinalMap.png');
+const img = require('../assets/images/FinalMap.png');
 
 export default class FloorMap extends PureComponent {
     render() {
@@ -9,7 +9,7 @@ export default class FloorMap extends PureComponent {
         return (
             <View style={style.container}>
                 <View style={style.HeaderView}>
-                <Text style={style.HeaderText}>Floor Map</Text>
+                <Text style={style.HeaderText}>Event Map</Text>
             </View>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <Image style={style.image} source={img} />

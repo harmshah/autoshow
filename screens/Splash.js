@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, Image } from 'react-native'
 import OnBoarding from './OnBoarding';
-const img = require('../assets/logo/AutoShow-2023-blk-hrz.png');
+const img = require('../assets/images/AutoShow-2023-blk-hrz.png');
 
 const Splash = ({navigation}) => {
 

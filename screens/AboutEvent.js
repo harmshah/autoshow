@@ -3,8 +3,8 @@ import { View, Image, StyleSheet, Text, Dimensions, ScrollView } from 'react-nat
 import MapView, { Marker } from 'react-native-maps';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
-const img1 = require('../assets/Cars/1.png');
-const img2 = require('../assets/pinnedmap.png');
+const img1 = require('../assets/images/1.png');
+const img2 = require('../assets/images/pinnedmap.png');
 
 export default function AboutEvent() {
    
@@ -82,7 +82,7 @@ export default function AboutEvent() {
     return (
         <View style={styles.container}>
             <View style={styles.HeaderView}>
-                <Text style={styles.HeaderText}>About The Event</Text>
+                <Text style={styles.HeaderText}>About Us</Text>
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Image style={styles.image1} source={img1} />
