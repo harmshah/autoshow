@@ -1,16 +1,11 @@
 {
   "expo": {
-    "name": "expopro",
+    "name": "Auto Show",
     "slug": "expopro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -34,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "897c1dd2-dbf9-4943-b8cf-fdddb25858e7"
+        "projectId": "1fb2de05-67bc-44bf-ac1d-06cb41ca2eff"
       }
     }
   }
